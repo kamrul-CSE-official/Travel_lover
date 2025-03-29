@@ -1,11 +1,9 @@
-import Banner from "./_components/Banner"
+import Banner from "./_components/Banner";
 
-function HomePage() {
+export default function Home() {
   return (
-    <div>
-        <Banner />
-    </div>
-  )
+    <main className="min-h-screen">
+      <Banner />
+    </main>
+  );
 }
-
-export default HomePage

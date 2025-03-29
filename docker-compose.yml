@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  react-app:
+    image: node:18-alpine # Use a Node.js image for development
+    working_dir: /src
+    volumes:
+      - .:/arc  # Mounts the local project into the container
+      - /app/node_modules # Prevents overwriting node_modules
+    ports:
+      - "3000:3000" # Maps port 3000
+    command: npm start
+    environment:
+      - CHOKIDAR_USEPOLLING=true # Helps with hot reloading in Docker
